@@ -1,0 +1,45 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:5.7.33
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      #MYSQL_ROOT_PASSWORD: 
+      MYSQL_DATABASE: localhost
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 
+      MYSQL_DB_NAME: fastapi-sqlalchemy-alembic
+    
+        
+  # web:
+  # build: .
+   #command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+  #fastapi:
+  #  depends_on:
+      #- db
+   # image: fastapi:latest
+    #ports:
+     # - "8000:80"
+    #restart: always
+    #environment:
+   # FASTAPI_DB_HOST: db:3306
+   # FASTAPI_DB_USER: root
+    #FASTAPI_DB_PASSWORD: 
+   # FASTAPI_DB_NAME: fastapi-sqlalchemy-alembic
+  #docker-hub:
+  #  container_name: docker-hub
+  #  image: fastapi_sqlalchemy_alembic
+    #environment:
+    #  - DOCKER-HUB_DEFAULT_EMAIL=coumba1234
+      #- DOCKER-HUB_DEFAULT_PASSWORD=
+    #ports:
+    #  - "5050:80"
+   # depends_on:
+    #
+    #  - db
+
+volumes:
+  db_data: {}

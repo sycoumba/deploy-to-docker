@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+fastapi = "*"
+fastapi-sqlalchemy = "*"
+pydantic = "*"
+alembic = "*"
+uvicorn = "*"
+mysql-connector-python = "*"
+docker-hub = "*"
+python-dotenv = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.7"
